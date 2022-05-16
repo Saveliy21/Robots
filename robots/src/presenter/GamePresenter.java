@@ -13,12 +13,12 @@ public class GamePresenter {
 
     public GamePresenter(GameVisualizer visualizer){
         visualizer.addMouseEventListener(this::setNewTarget);
-        visualizer.addTaskOnUpdatePanel(new TimerTask() {
-            @Override
-            public void run() {
-                updateModel();
-            }
-        });
+//        visualizer.addTaskOnUpdatePanel(new TimerTask() {
+//            @Override
+//            public void run() {
+//                updateModel();
+//            }
+//        });
     }
     private final GameState gameState = new GameState(100,100,0);
     private  TargetData targetData;
