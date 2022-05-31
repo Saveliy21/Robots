@@ -35,8 +35,8 @@ public class MainApplicationFrame extends JFrame
         LogWindow logWindow = createLogWindow();
         addWindow(logWindow);
 
-        LogCellPanel cellPanel = new LogCellPanel();
-        cellPanel.setSize(400,400);
+        CellPanel cellPanel = new CellPanel();
+        cellPanel.setSize(410,433);
         addWindow(cellPanel);
         setJMenuBar(createMenuBar());
         setDefaultCloseOperation(EXIT_ON_CLOSE);
@@ -78,17 +78,4 @@ public class MainApplicationFrame extends JFrame
         menu.add(menuItem);
     }
 
-    private void setLookAndFeel(String className)
-    {
-        try
-        {
-            UIManager.setLookAndFeel(className);
-            SwingUtilities.updateComponentTreeUI(this);
-        }
-        catch (ClassNotFoundException | InstantiationException
-            | IllegalAccessException | UnsupportedLookAndFeelException e)
-        {
-            // just ignore
-        }
-    }
 }
